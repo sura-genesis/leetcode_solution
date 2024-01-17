@@ -12,6 +12,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
     Input: l1 = [2,4,3], l2 = [5,6,4]
     Output: [7,0,8]
     Explanation: 342 + 465 = 807.
+    
 # Example 2 
 
     Input: l1 = [0], l2 = [0]
@@ -40,5 +41,6 @@ Figure 1. Visualization of the addition of two numbers:
 342 + 465 = 807
 342 + 465 = 807.
 Each node contains a single digit and the digits are stored in reverse order.
+
 
 
