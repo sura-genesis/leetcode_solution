@@ -42,5 +42,44 @@ Figure 1. Visualization of the addition of two numbers:
 342 + 465 = 807.
 Each node contains a single digit and the digits are stored in reverse order.
 
+ALGORITHM 
+just like how you would sum two numbers on a piece of paper we begin by summing the lest -significant digits which is the head of l1 and l2. since each digit is in the range of 0. . .9
+
+summing two digits may overflow for example 5 + 7 = 12 
+
+in this case we set tthe current digits to 2 and bring over the carry = 1 to the next iteration carry must be either 0 or 1. because the largest possible sum of the digits (including the carry is 9 + 9 + 1 = 19)
+
+the pseudocode is as following:
+
+       1, intialize current node to dummy head of the returning list 
+       2, intialize carry to 0
+       3, loop through list l1 and l2 until yu reach both ends and carry is 0
+            set x to node l1 value if l1 hase reached the end of l1 set tp 0.
+            set y to node l2`s value if l2 has reached the end of l2 set to 0.
+            set sum = x + y + carry 
+            update a new node with the difit value of (sum, med 10 ) and set it to 
+            current nodes next then advance current node to nect 
+            advance both l1 and l2 
+       4, return dummy head`s next node.
+    
+Note that we use a dummy head to simplify the code. Without a dummy head, you would have to write extra conditional statements to initialize the head's value.
+
+take extra caution of the following cases:
+                    -----------------------------------------------------------------------------------
+                    test case                          expanation 
+                    -----------------------------------------------------------------------------------
+                    
+                    l1 = [0,1]             when one list is longer than the other 
+                    l2 = [0,1,2]
+                    -----------------------------------------------------------------------------------
+                    l1 = [] 
+                    l2 = [0,1]             when one list is null which means an empty list 
+                    -----------------------------------------------------------------------------------
+                    l1 = [9,9]
+                    l2 = [1]              the sum could have an extra carry of one at the end which 
+                                          is easy to forget.
+                    -----------------------------------------------------------------------------------
+
+ 
 
 
