@@ -65,6 +65,8 @@ the pseudocode is as following:
 Note that we use a dummy head to simplify the code. Without a dummy head, you would have to write extra conditional statements to initialize the head's value.
 
 take extra caution of the following cases:
+
+
                     -----------------------------------------------------------------------------------
                     test case                          expanation 
                     -----------------------------------------------------------------------------------
